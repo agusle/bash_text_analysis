@@ -4,13 +4,13 @@
 # Comentarios menu      #
 #########################
 
-#introduccion
-#read -p "Antes de comenzar, ¿podrias decirme tu nombre? : " USERNAME
-
 #validacion de archivo de texto en directorio  ./data
 [[ $(ls ./data | wc -l) -lt 1 ]] && echo "No se encontró archivo dentro del directorio \"./data\"." && exit 1 
 [[ $(ls ./data | wc -l) -gt 1 ]] && echo "El directorio \"./data\" posee mas de un archivo." && exit 2 
-[[ ! -e $(find ./data -type f -name *.txt) ]] && echo "El archivo cargado en \"./data\"  no es de texto." && exit 3
+[[ ! -e $(find ./data -type f -name "*.txt") ]] && echo "El archivo cargado en \"./data\" no es de texto." && exit 3
+
+#introduccion
+read -p "Antes de comenzar, ¿podrias decirme tu nombre? : " USERNAME
 
 #mensaje de bienvenida
 echo -e "Hola $USERNAME!\nBienvenido al analizador de textos con bash!"
@@ -25,6 +25,7 @@ do
     case $OPCION in
         "Longitud de palabras")
             echo "Usted eligió la opción $REPLY: $OPCION"
+            ./statsWords.sh ./data/$(ls ./data)
             ;;
         "Uso de palabras")
             echo "Usted eligió la opción $REPLY: $OPCION"
