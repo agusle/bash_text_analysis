@@ -8,7 +8,7 @@
 #read -p "Antes de comenzar, ¿podrias decirme tu nombre? : " USERNAME
 
 #validacion de archivo de texto en directorio  ./data
-[[ $(ls ./data | wc -l) -ne 1 ]] && echo "No se encontró archivo dentro del directorio ./data" && exit 1 
+[[ $(ls ./data | wc -l) -lt 1 ]] && echo "No se encontró archivo dentro del directorio ./data" && exit 1 
 [[ ! -e $(find ./data -type f -name *.txt) ]] && echo "El archivo cargado en ./data  no es de texto." && exit 2
 
 #mensaje de bienvenida
