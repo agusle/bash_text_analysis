@@ -7,14 +7,18 @@
 #introduccion
 #read -p "Antes de comenzar, ¿podrias decirme tu nombre? : " USERNAME
 
-#permite un solo archivo para analizar en la carpeta ./data
-[[ $(ls ./data | wc -l) -ne 1 ]] && echo "No se encontró archivo de texto dentro del directorio ./data" && exit 1 
+#validacion de archivo de texto en directorio  ./data
+[[ $(ls ./data | wc -l) -ne 1 ]] && echo "No se encontró archivo dentro del directorio ./data" && exit 1 
+[[ ! -e $(find ./data -type f -name *.txt) ]] && echo "El archivo cargado en ./data  no es de texto." && exit 2
 
+#mensaje de bienvenida
 echo -e "Hola $USERNAME!\nBienvenido al analizador de textos con bash!"
 echo "Por favor, seleccione el análisis a realizar en \"$(ls ./data)\":"
 
+#listado de opciones y seleccion
 OPCIONES=("Longitud de palabras" "Uso de palabras" "Nombres propios" "Longitud de oraciones" "Lineas en blanco" "Salir")
 PS3="Elija el número del analisis a realizar: "
+
 select OPCION in "${OPCIONES[@]}"
 do    
     case $OPCION in
@@ -43,13 +47,6 @@ do
             continue
             ;;
     esac
-    #echo -n "Analizando texto"
-    #for message in $(seq 3)
-    #do
-    #    echo -n "."
-    #    sleep 1
-    #done 
-
 done
 
 exit 0
