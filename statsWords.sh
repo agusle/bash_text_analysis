@@ -16,13 +16,13 @@ LENGTH_SUM=0
 
 for WORD in $(cat $FILE)
 do
-    [[ ${#WORD} -lt $SHORTEST ]] && ([[ $WORD != "" ]] || [[ $WORD != " " ]]) && SHORTEST=${#WORD} && SHORTEST_W="y" #"$WORD"
+    [[ ${#WORD} -lt $SHORTEST ]] && ([[ $WORD != "" ]] || [[ $WORD != " " ]]) && SHORTEST=${#WORD} && SHORTEST_W="$WORD"
     [[ ${#WORD} -gt $LONGEST ]] && LONGEST=${#WORD} && LONGEST_W=$WORD
     LENGTH_SUM=$(($LENGTH_SUM+${#WORD}))
 done
 echo ""
 echo "=============================================================================================="
-echo "                        LONGITUD DE PALABRAS DE \"$(ls ./data)\"                                        "
+echo "                        LONGITUD DE PALABRAS DE \"$(ls ./data)\""
 echo "=============================================================================================="
 echo ""
 echo "PALABRA MAS CORTA: \"$SHORTEST_W\" con $SHORTEST caracteres."
