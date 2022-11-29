@@ -14,9 +14,9 @@ LONGEST=-1
 LONGEST_W=""
 LENGTH_SUM=0
 
-for WORD in $(cat $FILE)
+for WORD in $(cat $FILE | tr "\t\n\r" " ")
 do
-    [[ ${#WORD} -lt $SHORTEST ]] && ([[ $WORD != "" ]] || [[ $WORD != " " ]]) && SHORTEST=${#WORD} && SHORTEST_W="$WORD"
+    [[ ${#WORD} -lt $SHORTEST ]] && ([[ $WORD != "" ]] || [[ $WORD != " " ]]) && SHORTEST=${#WORD} && SHORTEST_W=$WORD
     [[ ${#WORD} -gt $LONGEST ]] && LONGEST=${#WORD} && LONGEST_W=$WORD
     LENGTH_SUM=$(($LENGTH_SUM+${#WORD}))
 done
