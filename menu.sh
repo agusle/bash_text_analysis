@@ -13,7 +13,7 @@
 read -p "Antes de comenzar, ¿podrias decirme tu nombre? : " USERNAME
 
 #mensaje de bienvenida
-echo -e "Hola $USERNAME!\nBienvenido al analizador de textos con bash!"
+echo -e "Hola ${USERNAME^}!\nBienvenido al analizador de textos con bash!"
 echo "Por favor, seleccione el análisis a realizar en \"$(ls ./data)\":"
 
 #listado de opciones y seleccion
@@ -29,6 +29,7 @@ do
             ;;
         "Uso de palabras")
             echo "Usted eligió la opción $REPLY: $OPCION"
+            ./statsUsageWords.sh ./data/$(ls ./data)
             ;;
         "Nombres propios")
             echo "Usted eligió la opción $REPLY: $OPCION"
