@@ -12,7 +12,7 @@ for WORD in $(cat $FILE | tr "\t\n\r" " " | tr -d "[:punct:]")
 do
     if [[ ${#WORD} -ge 4 ]]
     then
-        FREQ=$(grep -o -i "$WORD" $FILE | wc -l) 
+        FREQ=$(grep -o -w "$WORD" $FILE | wc -l) 
         echo "$FREQ apariciones: \"$WORD\"" >> /tmp/words_usage.tmp
     fi
 done
@@ -30,4 +30,4 @@ do
 done
 echo ""
 
-#rm /tmp/words_usage.tmp
+rm /tmp/words_usage.tmp
