@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
-#########################
-# Comentarios menu      #
-#########################
+#########################################################################################
+#                           Menu de opciones de usuario                                 #
+# Este script se ejecuta directamente al inicializarse el container.                    #
+# Tiene como función brindar un conjunto de análisis sobre un archivo de texto          #
+# ubicado en ./data. El usuario puede elegir entre estas opciones y los resultados      #
+# de las mismas serán generados por diferentes archivos .sh ubicados en el directorio   #
+# ./scripts. Antes de comenzar, valida que el archivo a analizar se encuentre           #
+# correctamente cargado.                                                                #
+#########################################################################################
 
 #validacion de archivo de texto en directorio  ./data
 [[ $(ls ./data | wc -l) -lt 1 ]] && echo "No se encontró archivo dentro del directorio \"./data\"." && exit 1 
@@ -13,7 +19,7 @@
 read -p "Antes de comenzar, ¿podrias decirme tu nombre? : " USERNAME
 
 #mensaje de bienvenida
-echo -e "Hola ${USERNAME^}!\nBienvenido al analizador de textos con bash!"
+echo -e "\nHola ${USERNAME^}!\nBienvenido al analizador de textos con bash!\n"
 echo "Por favor, seleccione el análisis a realizar en \"$(ls ./data)\":"
 
 #listado de opciones y seleccion
@@ -26,23 +32,23 @@ do
     case $OPCION in
         "Longitud de palabras")
             echo "Usted eligió la opción $REPLY: $OPCION"
-            ./statsWords.sh $FILE
+            ./scripts/statsWords.sh $FILE
             ;;
         "Uso de palabras")
             echo "Usted eligió la opción $REPLY: $OPCION"
-            ./statsUsageWords.sh $FILE
+            ./scripts/statsUsageWords.sh $FILE
             ;;
         "Nombres propios")
             echo "Usted eligió la opción $REPLY: $OPCION"
-            ./findNames.sh $FILE
+            ./scripts/findNames.sh $FILE
             ;;
         "Longitud de oraciones")
             echo "Usted eligió la opción $REPLY: $OPCION"
-            ./statsSentences.sh $FILE
+            ./scripts/statsSentences.sh $FILE
             ;;
         "Lineas en blanco")
             echo "Usted eligió la opción $REPLY: $OPCION"
-            ./blankLinesCounter.sh $FILE
+            ./scripts/blankLinesCounter.sh $FILE
             ;;        
         "Salir")
             echo "Muchas gracias por utilizar el analizador de textos, $USERNAME."
