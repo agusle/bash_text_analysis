@@ -1,0 +1,11 @@
+ENTORNO
+
+Un entorno de programación es un programa o conjunto de programas que engloban todas las tareas necesarias para el desarrollo de un programa o aplicación. Estas tareas son básicamente las siguientes:
+
+Edición del programa.
+Compilación y enlazado.
+Ejecución.
+Depuración.
+
+Hay quien además incluye la creación de documentación complementaria que facilita el mantenimiento del programa dentro de estas funciones.
+Este tipo de entornos incorporan numerosas herramientas, utilidades, aplicaciones ya desarrolladas, ejemplos, tutoriales, etc. Todas ellas encaminadas a faciltiar y mejorar el desarrollo.
