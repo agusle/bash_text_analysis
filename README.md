@@ -58,6 +58,7 @@ Requisitos que debes disponer en tu equipo:
 - 2MB de espacio en disco para clonar el proyecto
 - 11.45 MB de espacio en disco para crear la imagen de docker
 
+
 - **Descargar el proyecto**
 
 ```bash
