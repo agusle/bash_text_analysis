@@ -19,24 +19,26 @@ echo "Por favor, seleccione el análisis a realizar en \"$(ls ./data)\":"
 #listado de opciones y seleccion
 OPCIONES=("Longitud de palabras" "Uso de palabras" "Nombres propios" "Longitud de oraciones" "Lineas en blanco" "Salir")
 PS3="Elija el número del analisis a realizar: "
+FILE=./data/$(ls ./data)
 
 select OPCION in "${OPCIONES[@]}"
 do    
     case $OPCION in
         "Longitud de palabras")
             echo "Usted eligió la opción $REPLY: $OPCION"
-            ./statsWords.sh ./data/$(ls ./data)
+            ./statsWords.sh $FILE
             ;;
         "Uso de palabras")
             echo "Usted eligió la opción $REPLY: $OPCION"
-            ./statsUsageWords.sh ./data/$(ls ./data)
+            ./statsUsageWords.sh $FILE
             ;;
         "Nombres propios")
             echo "Usted eligió la opción $REPLY: $OPCION"
-            ./findNames.sh ./data/$(ls ./data)
+            ./findNames.sh $FILE
             ;;
         "Longitud de oraciones")
             echo "Usted eligió la opción $REPLY: $OPCION"
+            ./statsSentences.sh $FILE
             ;;
         "Lineas en blanco")
             echo "Usted eligió la opción $REPLY: $OPCION"
