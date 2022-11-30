@@ -25,7 +25,6 @@ do
     else
         SENTENCE=$SENTENCE"$WORD"
         LENGHT=$(echo -n $SENTENCE | wc -w)
-        #echo $SENTENCE >> /tmp/sentences.tmp
         [[ $LENGHT -lt $SHORTEST ]] && SHORTEST=$LENGHT && SHORTEST_S=$SENTENCE
         [[ $LENGHT -gt $LONGEST ]] && LONGEST=$LENGHT && LONGEST_S=$SENTENCE
         TOTAL_SENTENCES=$(($TOTAL_SENTENCES+1))
