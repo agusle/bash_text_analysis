@@ -42,6 +42,7 @@ do
             ;;
         "Lineas en blanco")
             echo "Usted eligió la opción $REPLY: $OPCION"
+            ./blankLinesCounter.sh $FILE
             ;;        
         "Salir")
             echo "Muchas gracias por utilizar el analizador de textos, $USERNAME."
