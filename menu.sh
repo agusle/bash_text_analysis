@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
-#########################
-# Comentarios menu      #
-#########################
+#########################################################################################
+#                           Menu de opciones de usuario                                 #
+# Este script se ejecuta directamente al inicializarse el container.                    #
+# Tiene como función brindar un conjunto de análisis sobre un archivo de texto          #
+# ubicado en ./data. El usuario puede elegir entre estas opciones y los resultados      #
+# de las mismas serán generados por diferentes archivos .sh ubicados en el directorio   #
+# ./scripts. Antes de comenzar, valida que el archivo a analizar se encuentre           #
+# correctamente cargado.                                                                #
+#########################################################################################
 
 #validacion de archivo de texto en directorio  ./data
 [[ $(ls ./data | wc -l) -lt 1 ]] && echo "No se encontró archivo dentro del directorio \"./data\"." && exit 1 
