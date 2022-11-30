@@ -33,6 +33,7 @@ do
             ;;
         "Nombres propios")
             echo "Usted eligió la opción $REPLY: $OPCION"
+            ./findNames.sh ./data/$(ls ./data)
             ;;
         "Longitud de oraciones")
             echo "Usted eligió la opción $REPLY: $OPCION"
