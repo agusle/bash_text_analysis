@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/project-logo.png" width = 200 height = 200>
+    <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/project-logo.png" width = 500 height = 500>
 </p>
 
 <p align="center">
@@ -55,8 +55,8 @@ Debajo puedes encontrar un ejemplo sobre como instalar y ejecutar los servicios:
 Puedes utilizar [Docker](https://www.docker.com/) para instalar de forma fácil los paquetes y bibliotecas utilizadas.
 
 Requisitos que debes disponer en tu equipo:
-    - 2MB de espacio en disco para clonar el proyecto
-    - 11.45 MB de espacio en disco para crear la imagen de docker
+- 2MB de espacio en disco para clonar el proyecto
+- 11.45 MB de espacio en disco para crear la imagen de docker
 
 - **Descargar el proyecto**
 
@@ -80,13 +80,13 @@ $ docker run -it --rm --name mi_analizador_de_texto bash_text_analysis
 
 Una vez ejecutado podrás econtrarte con la solicitud de tu nombre y luego el siguiente menú:
 <p align="center">
-    <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_menu.PNG" width = 200 height = 200>
+    <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_menu.PNG" width = 500 height = 137>
 </p>
 
 Donde deberás elegir entre diferentes opciones de análisis para tu texto ingresando su número.
 Ejemplo ingresando el nro. "1":
 <p align="center">
-    <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_1.PNG" width = 200 height = 200>
+    <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_1.PNG" width = 600 height = 300>
 </p>
 
 ------------------
