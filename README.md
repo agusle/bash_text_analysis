@@ -79,13 +79,13 @@ La misma se encuentra basada en la [imagen de Bash de Docker Hub](https://hub.do
 $ docker run -it --rm -v $(pwd)/$(ls *.txt):/app/data/texto.txt --name mi_analizador_de_texto bash_text_analysis
 ```
 
-Una vez ejecutado podrás econtrarte con la solicitud de tu nombre y luego el siguiente menú:
+Una vez ejecutado podrás econtrarte con la solicitud de tu nombre (puedes tipearlo y confirmar con la tecla "ENTER" y luego el siguiente menú:
 <p align="center">
     <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_menu.PNG" width = 500 height = 137>
 </p>
 
 Donde deberás elegir entre diferentes opciones de análisis para tu texto ingresando su número.
-Ejemplo ingresando el nro. "1":
+Ejemplo ingresando el nro. "1" en tu teclado y luego presionando la tecla "ENTER":
 <p align="center">
     <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_1.PNG" width = 600 height = 300>
 </p>
