@@ -1,6 +1,10 @@
 FROM bash:4.4
 
-LABEL MANTAINER Agustin Leperini agustinleperini5@gmail.com
+LABEL   MANTAINER="Agustin Leperini"\ 
+        EMAIL="agustinleperini5@gmail.com"
+
+WORKDIR /app
 
 COPY . .
-CMD ["bash", "/menu.sh"]
+
+CMD ["bash", "/app/menu.sh"]
