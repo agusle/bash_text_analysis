@@ -54,9 +54,9 @@ Debajo puedes encontrar un ejemplo sobre como instalar y ejecutar los servicios:
 
 Puedes utilizar [Docker](https://www.docker.com/) para instalar de forma fácil los paquetes y bibliotecas utilizadas.
 
-Requisitos que debes disponer en tu equipo:
-- 2MB de espacio en disco para clonar el proyecto
-- 11.45 MB de espacio en disco para crear la imagen de docker
+- **Requisitos que debes disponer en tu equipo**:
+    - 2MB de espacio en disco para clonar el proyecto
+    - 11.45 MB de espacio en disco para crear la imagen de docker
 
 - **Descargar el proyecto**
 
@@ -70,12 +70,12 @@ $ git clone https://github.com/agusle/bash_text_analysis.git
 $ docker build -t bash_text_analysis .
 ```
 
-La misma se encuentra basada en la [imagen de Bash de docker hub](https://hub.docker.com/_/bash).
+La misma se encuentra basada en la [imagen de Bash de Docker Hub](https://hub.docker.com/_/bash).
 
 - **Ejecutar el container en Docker**
 
 ```bash
-$ docker run -it --rm --name mi_analizador_de_texto bash_text_analysis
+$ docker run -it --rm -v $(pwd)/$(ls *.txt):/app/data/texto.txt --name mi_analizador_de_texto bash_text_analysis
 ```
 
 Una vez ejecutado podrás econtrarte con la solicitud de tu nombre y luego el siguiente menú:
@@ -89,19 +89,20 @@ Ejemplo ingresando el nro. "1":
     <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_1.PNG" width = 600 height = 300>
 </p>
 
+Luego puedes elegir entre ejecutar otros análisis o hasta el mismo.  
+Tip😎 : Si presionas la tecla "ENTER" en tu teclado puedes ver las opciones disponibles nuevamente.  
+Para salir puedes elegir la opción "6".
+
 ------------------
 
 ## 👀 Uso
 
-Para poder analizar tu propio texto, deberás ingresar el mismo en formato .txt dentro del directorio ./data.
-Solo se admite un solo archivo en dicho directorio, y su extensión únicamente debe ser **".txt"**.
+Para comenzar con tu propio texto, debes reemplazar el archivo existente por el que quieras teniendo en cuenta las siguientes restricciones:
+- El arhivo debe tener extensión **".txt"**
+- Solo debe existir **un único archivo con extensión ".txt" en el directorio** principal del proyecto (bash_text_analysis) 
+- Puedes llamar a tu archivo como quieras
+- El proyecto ya incluye un ejemplo```./mitexto.txt``` por lo que puedes comenzar sin incluir tu propio archivo.
+- Tienes otro archivo  de texto en el directorio ```./extras/texto-2.txt``` por si quieres probar.
 
-- **El proyecto ya incluye un ejemplo:**
-
-```bash
-$ ./data/objetivos.txt
-```
-
-Para comenzar con tu propio texto, debes reemplazar el archivo existente por el que quieras teniendo en cuenta las restricciones mencionadas.
 
 Para verificar los resultados del análisis de tu texto puedes basarte en la siguiente [herramienta online](https://wordcount.com/) u otra que encuentres útil.
