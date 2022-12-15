@@ -89,7 +89,7 @@ Ejemplo ingresando el nro. "1":
     <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_1.PNG" width = 600 height = 300>
 </p>
 
-Luego puedes elegir entre ejecutar otros análisis o hasta el mismo.  
+Luego puedes elegir entre ejecutar otros análisis o hasta el mismo nuevamente.  
 Tip😎 : Si presionas la tecla "ENTER" en tu teclado puedes ver las opciones disponibles nuevamente.  
 Para salir puedes elegir la opción "6".
 
@@ -98,7 +98,7 @@ Para salir puedes elegir la opción "6".
 ## 👀 Uso
 
 Para comenzar con tu propio texto, debes reemplazar el archivo existente por el que quieras teniendo en cuenta las siguientes restricciones:
-- El arhivo debe tener extensión **".txt"**
+- El archivo debe tener extensión **".txt"**
 - Solo debe existir **un único archivo con extensión ".txt" en el directorio** principal del proyecto (bash_text_analysis) 
 - Puedes llamar a tu archivo como quieras
 - El proyecto ya incluye un ejemplo```./mitexto.txt``` por lo que puedes comenzar sin incluir tu propio archivo.
