@@ -31,7 +31,7 @@ Dentro del proyecto podrás encontrar:
 .
 ├── Dockerfile                  -----> Intrucciones para crear imagen de Docker
 ├── README.md                   -----> Descripción del proyecto
-├── extras
+├── extras                      -----> Contiene archivos de uso secundario
 │   ├── Capture_1.PNG           -----> Captura de la opción 1 del menú del script en ejecución
 │   ├── Capture_menu.PNG        -----> Captura del menú del script en ejecución
 │   ├── TP_FINAL.pdf            -----> Consignas del trabajo práctico
