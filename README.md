@@ -31,13 +31,14 @@ Dentro del proyecto podrás encontrar:
 .
 ├── Dockerfile                  -----> Intrucciones para crear imagen de Docker
 ├── README.md                   -----> Descripción del proyecto
-├── data                        -----> Contiene el archivo a ser analizado
-│   └── objetivos.txt           -----> Archivo de texto a analizar
-├── extras                      -----> Contiene archivos secundarios
+├── extras
+│   ├── Capture_1.PNG           -----> Captura de la opción 1 del menú del script en ejecución
+│   ├── Capture_menu.PNG        -----> Captura del menú del script en ejecución
 │   ├── TP_FINAL.pdf            -----> Consignas del trabajo práctico
-│   ├── entorno.txt             -----> Otro ejemplo de archivo de texto para analizar.
-│   └── project-logo.png        -----> Imagen de logo del proyecto
+│   ├── project-logo.png        -----> Imagen de logo del proyecto
+│   └── texto-2.txt             -----> Otro ejemplo de archivo de texto para analizar
 ├── menu.sh                     -----> Script de ejecución principal
+├── mitexto.txt                 -----> Archivo de texto a analizar
 └── scripts                     -----> Contiene scrips que brindan funcionalidad al script principal
     ├── blankLinesCounter.sh    -----> Script para contar lineas vacias
     ├── findNames.sh            -----> Script para identificar nombres propios
