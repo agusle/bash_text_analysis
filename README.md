@@ -79,7 +79,7 @@ La misma se encuentra basada en la [imagen de Bash de Docker Hub](https://hub.do
 $ docker run -it --rm -v $(pwd)/$(ls *.txt):/app/data/texto.txt --name mi_analizador_de_texto bash_text_analysis
 ```
 
-Una vez ejecutado podrás econtrarte con la solicitud de tu nombre y luego el siguiente menú:
+Una vez ejecutado podrás encontrarte con la solicitud de tu nombre y luego el siguiente menú:
 <p align="center">
     <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_menu.PNG" width = 500 height = 137>
 </p>
