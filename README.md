@@ -31,13 +31,14 @@ Dentro del proyecto podrás encontrar:
 .
 ├── Dockerfile                  -----> Intrucciones para crear imagen de Docker
 ├── README.md                   -----> Descripción del proyecto
-├── data                        -----> Contiene el archivo a ser analizado
-│   └── objetivos.txt           -----> Archivo de texto a analizar
-├── extras                      -----> Contiene archivos secundarios
+├── extras                      -----> Contiene archivos de uso secundario
+│   ├── Capture_1.PNG           -----> Captura de la opción 1 del menú del script en ejecución
+│   ├── Capture_menu.PNG        -----> Captura del menú del script en ejecución
 │   ├── TP_FINAL.pdf            -----> Consignas del trabajo práctico
-│   ├── entorno.txt             -----> Otro ejemplo de archivo de texto para analizar.
-│   └── project-logo.png        -----> Imagen de logo del proyecto
+│   ├── project-logo.png        -----> Imagen de logo del proyecto
+│   └── texto-2.txt             -----> Otro ejemplo de archivo de texto para analizar
 ├── menu.sh                     -----> Script de ejecución principal
+├── mitexto.txt                 -----> Archivo de texto a analizar
 └── scripts                     -----> Contiene scrips que brindan funcionalidad al script principal
     ├── blankLinesCounter.sh    -----> Script para contar lineas vacias
     ├── findNames.sh            -----> Script para identificar nombres propios
@@ -79,7 +80,7 @@ La misma se encuentra basada en la [imagen de Bash de Docker Hub](https://hub.do
 $ docker run -it --rm -v $(pwd)/$(ls *.txt):/app/data/texto.txt --name mi_analizador_de_texto bash_text_analysis
 ```
 
-Una vez ejecutado podrás econtrarte con la solicitud de tu nombre (puedes tipearlo y confirmar con la tecla "ENTER" y luego el siguiente menú:
+Una vez ejecutado podrás econtrarte con la solicitud de tu nombre (puedes tipearlo y confirmar con la tecla "ENTER") y luego el siguiente menú:
 <p align="center">
     <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_menu.PNG" width = 500 height = 137>
 </p>
@@ -90,7 +91,7 @@ Ejemplo ingresando el nro. "1" en tu teclado y luego presionando la tecla "ENTER
     <img src="https://github.com/agusle/bash_text_analysis/blob/main/extras/Capture_1.PNG" width = 600 height = 300>
 </p>
 
-Luego puedes elegir entre ejecutar otros análisis o hasta el mismo.  
+Luego puedes elegir entre ejecutar otros análisis o hasta el mismo nuevamente.  
 Tip😎 : Si presionas la tecla "ENTER" en tu teclado puedes ver las opciones disponibles nuevamente.  
 Para salir puedes elegir la opción "6".
 
@@ -99,7 +100,7 @@ Para salir puedes elegir la opción "6".
 ## 👀 Uso
 
 Para comenzar con tu propio texto, debes reemplazar el archivo existente por el que quieras teniendo en cuenta las siguientes restricciones:
-- El arhivo debe tener extensión **".txt"**
+- El archivo debe tener extensión **".txt"**
 - Solo debe existir **un único archivo con extensión ".txt" en el directorio** principal del proyecto (bash_text_analysis) 
 - Puedes llamar a tu archivo como quieras
 - El proyecto ya incluye un ejemplo```./mitexto.txt``` por lo que puedes comenzar sin incluir tu propio archivo.
